@@ -7,7 +7,7 @@ video = cv2.VideoCapture()
 
 #colocar o ip e porta gerado pelo app entre as aspas, exemplo http://192.168.1.1:4742/ , aplicativo sugerido: Droidcam
 
-ip = " "
+ip = "http://192.168.1.7:4747/video"
 
 video.open(ip)
 
@@ -26,7 +26,7 @@ while True:
     #contagem de frames
     cv2.putText(img, f"Frames: {frame_count}", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
     cv2.imshow('img', img)
-    if frame_count % 5 == 0:  #capturando 1 a cada 5 frames, para ter mais tempo para tirar as fotos
+    if frame_count % 10 == 0:  #capturando 1 a cada 5 frames, para ter mais tempo para tirar as fotos
         cv2.imwrite(os.path.join(output_folder, f"frame_{frame_count}.jpg"), img)
     key = cv2.waitKey(1)
     if key == ord('q'):  #se q for pressionada, já finaliza tudo
