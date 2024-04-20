@@ -7,7 +7,7 @@ video = cv2.VideoCapture()
 
 #colocar o ip e porta gerado pelo app entre as aspas, exemplo http://192.168.1.1:4742/ , aplicativo sugerido: Droidcam
 
-ip = "http://192.168.1.7:4747/video"
+ip = ""
 
 video.open(ip)
 
